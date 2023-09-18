@@ -11,7 +11,7 @@ git branch -m master main
 to run:
 python manage.py runserver
 python manage.py migrate - set up database
-python manage.py createsuperuser - create first user rich tryQ323@
+python manage.py createsuperuser - create first user rich tryQ423@
 python manage.py startapp products - create first app
 
 After making changes to databse like adding model:
