@@ -17,4 +17,5 @@ python manage.py startapp products - create first app
 After making changes to databse like adding model:
 python manage.py makemigrations
 python manage.py migrate
+python manage.py shell - to manipulate db on cli
 
