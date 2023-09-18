@@ -7,3 +7,14 @@ peotry shell - activates virtual env, exit to leave
 poetry install - installs dependencies
 git init
 git branch -m master main
+
+to run:
+python manage.py runserver
+python manage.py migrate - set up database
+python manage.py createsuperuser - create first user rich tryQ323@
+python manage.py startapp products - create first app
+
+After making changes to databse like adding model:
+python manage.py makemigrations
+python manage.py migrate
+
