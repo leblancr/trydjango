@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # own, name of app created with startapp
+    'pages',
     'products',
 ]
 
