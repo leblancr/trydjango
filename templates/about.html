@@ -9,7 +9,13 @@
 
     <ul>
     {% for item in my_list %}
-        <li>{{ forloop.counter }} - {{ item }}</li>
+        {% if item == 'Ford' %}
+            <li>{{ forloop.counter }} - {{ item }} - {{ 'Blue' }}</li>
+        {% elif item == 'Chevy' %}
+            <li>{{ forloop.counter }} - {{ item }} - {{ 'Orange' }}</li>
+        {% elif item == 'Dodge' %}
+            <li>{{ forloop.counter }} - {{ item }} - {{ 'Red' }}</li>
+        {% endif %}
     {% endfor %}
     </ul>
 
