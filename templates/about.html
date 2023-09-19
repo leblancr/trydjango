@@ -3,18 +3,21 @@
 {% block content %}
     <h1>about</h1>
     <p>this is a template</p>
+
+    {{ my_html|safe }}
+
     <p>{{ my_text }}, {{ my_number }} <br />
     {{ my_list }}
     </p>
 
     <ul>
     {% for item in my_list %}
-        {% if item == 'Ford' %}
-            <li>{{ forloop.counter }} - {{ item }} - {{ 'Blue' }}</li>
-        {% elif item == 'Chevy' %}
-            <li>{{ forloop.counter }} - {{ item }} - {{ 'Orange' }}</li>
-        {% elif item == 'Dodge' %}
-            <li>{{ forloop.counter }} - {{ item }} - {{ 'Red' }}</li>
+        {% if item == 'ford' %}
+            <li>{{ forloop.counter }} - {{ item|capfirst }} - {{ 'Blue' }}</li>
+        {% elif item == 'chevy' %}
+            <li>{{ forloop.counter }} - {{ item|capfirst }} - {{ 'Orange' }}</li>
+        {% elif item == 'dodge' %}
+            <li>{{ forloop.counter }} - {{ item|capfirst }} - {{ 'Red' }}</li>
         {% endif %}
     {% endfor %}
     </ul>
