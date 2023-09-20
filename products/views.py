@@ -3,7 +3,7 @@ from .models import Product
 
 # Product is the database
 def product_detail_view(request):
-    obj = Product.objects.get(id=1)
+    obj = Product.objects.get(id=1)  # get one of the objects from the database
     # context = {
     #     'title': obj.title,
     #     'description': obj.description
@@ -11,4 +11,4 @@ def product_detail_view(request):
     context = {
         'object': obj
     }
-    return render(request, 'product/details.html', context)
+    return render(request, 'products/product_detail.html', context)
