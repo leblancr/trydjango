@@ -2,13 +2,15 @@ from django.shortcuts import render
 from .models import Product
 from .forms import ProductForm
 
-# Product is the database
+# ProductForm is a class with the database and input fields for
+# the column names in the daabase. Will make a new row when submited.
 def product_create_view(request):
     form = ProductForm(request.POST or None)
     if form.is_valid():
         form.save()
         form = ProductForm()
 
+    # send the form object to the html page
     context = {
         'form': form
     }
